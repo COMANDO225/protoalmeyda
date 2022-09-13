@@ -1,0 +1,52 @@
+.anderson_container svg{
+    height: 100%;
+}
+
+.rostro_path,
+.cls-11 {
+  fill: none;
+}
+.capucha {
+  fill: #252525;
+}
+.capucha_interior {
+  fill: #161515;
+}
+.rostro_content {
+  clip-path: url(#clip-path);
+}
+.cls-6 {
+  fill: #fbc39d;
+}
+.cls-7 {
+  fill: #f9ac7f;
+}
+.cls-8 {
+  fill: #261f1d;
+}
+.cls-9 {
+  fill: #e1926a;
+  opacity: 0.27;
+  mix-blend-mode: multiply;
+}
+.cls-10 {
+  fill: #150d03;
+}
+.cls-11 {
+  stroke: #e58b5e;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.95px;
+}
+.laptop_teclado {
+  fill: #1e1e1e;
+}
+.laptop_pantalla {
+  fill: #303030;
+}
+.laptop_led {
+  fill: var(--primary);
+}
+.almeyda_logo {
+  fill: #fff;
+}

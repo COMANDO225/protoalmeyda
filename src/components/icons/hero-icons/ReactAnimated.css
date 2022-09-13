@@ -1,0 +1,74 @@
+.wrapper {
+  display: flex;
+}
+.svg_content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 291px;
+  height: 328px;
+  transform: rotate(0);
+  transition: all 0.3s ease;
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.svg_content::after {
+  position: absolute;
+  content: "";
+  width: 64px;
+  height: 64px;
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+#atom {
+  overflow: visible;
+}
+.atom--elipse {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 15;
+  stroke-miterlimit: 10;
+}
+.atom--circle {
+  width: 40px;
+  height: 40px;
+  fill: var(--primary);
+  animation: atom 2s cubic-bezier(0.4, 0.48, 0.67, 0.73) infinite;
+  /* animation: atom 2s linear infinite; */
+}
+
+.atom--circle__1 {
+  offset: path(
+      "M201,131.8c-8.5-5.6-17.5-11.2-26.9-16.5c-77.6-44-153-57.8-168.3-30.7s35.1,84.7,112.8,128.7s153,57.8,168.3,30.7c13.5-23.7-23.7-70.9-85.3-111.9"
+    )
+    auto;
+}
+
+.atom--circle__2 {
+  offset: path(
+      "M97.9,81.5c9.8-47.2,27.8-78.7,48.4-78.7c31.1,0,56.3,72.3,56.3,161.6s-25.2,161.6-56.3,161.6S90,253.6,90,164.4c0-30.1,2.9-58.2,7.9-82.4"
+    )
+    auto;
+}
+
+.atom--circle__3 {
+  offset: path(
+      "M145.7,228.2c-66.9,32-126.5,39.6-140,15.9C-9.6,217,40.9,159.4,118.5,115.4s153-57.8,168.3-30.7c15.3,27.1-35.1,84.7-112.8,128.7c-9.4,5.3-18.7,10.2-28,14.6"
+    )
+    auto;
+}
+
+@keyframes atom {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}

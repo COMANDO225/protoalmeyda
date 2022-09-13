@@ -1,0 +1,156 @@
+/* DropMenu styles ============ */
+.dropMenuWrapper{
+    position: absolute;
+    width: 330px;
+    right: 0;
+    top: 45px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    overflow: hidden;
+}
+
+.mostrarDrop{
+    overflow-y: scroll;
+    margin-bottom: 5px;
+    transition: all .5s ease !important;
+}
+
+.dropMenuWrapper.dropMenuNav{
+    position: relative;
+    width: 100%;
+    right: 0;
+    top: 0px;
+    border-radius: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.dropMenuWrapper.dropMenuNav .dropMenu_title_text{
+    font-size: 18px;
+}
+.dropMenu{
+    transition: all .4s ease;
+}
+.dropMenu_container{
+    width: 100%;
+    padding: 0px 8px;
+}
+.dropOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: transparent;
+}
+.dropMenu_title{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    margin: 0 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.dropMenu_title_text{
+    font-size: 20px;
+    font-weight: 600;
+}
+.dropMenu_body{
+    margin: 10px 0;
+}
+.dropItem{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.dropItem:hover{
+    background-color: rgba(27, 49, 70, 0.05);
+}
+.dropItem_icon{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.dropItem_content{
+    display: flex;
+    align-items: center;
+}
+.chevrom_medium{
+    width: 20px;
+    height: 20px;
+}
+
+.dropMenu_body_footer{
+    background-color: #ffffff;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    font-size: 11px;
+    margin: 10px 8px 0 8px;
+    font-weight: 500;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.dropMenuWrapper.dropMenuNav .dropMenu_body_footer{
+    display: none;
+}
+
+/*======= CSSTransition estilos =======*/
+
+/* transition settings  */
+.menu-settings-enter{
+    position: absolute;
+    transform: translateX(-110%);
+}
+.menu-settings-enter-active{
+    transform: translateX(0%);
+    transition: all .5s ease;
+}
+.menu-settings-exit {
+    position: absolute;
+}
+.menu-settings-exit-active {
+    transform: translateX(-110%);
+    transition: all .5s ease;
+}
+
+/* transition temas  */
+.menu-temas-enter {
+    transform: translateX(110%);
+}
+.menu-temas-enter-active {
+    transform: translateX(0%);
+    transition: all .5s ease;
+}
+.menu-temas-exit {
+    
+}
+.menu-temas-exit-active {
+    transform: translateX(110%);
+    transition: all .5s ease;
+}
+  
+@media(max-width: 1000px){
+    .dropMenuWrapper{
+        display: none;
+    }
+    .dropOverlay{
+        background-color: rgba(0, 0, 0, 0.03);
+        backdrop-filter: blur(5px);
+    }
+    .dropMenuWrapper.dropMenuNav{
+        display: block;
+    }
+}

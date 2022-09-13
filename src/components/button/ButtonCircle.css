@@ -1,0 +1,101 @@
+/* efecto al dar scroll girara el icono */
+.nav.active .icon-rotate svg{
+    transform: rotate(90deg);
+}
+.btnCircle.active svg{
+    transform: rotate(90deg);
+}
+.nav.active .btnCircle.active svg{
+    transform: rotate(180deg);
+}
+/* el componente boton circular */
+.btnCircle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    transition: all .45s ease;
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+}
+/* .nobackground es una clase que le quiara el background x defecto */
+.nobackground .btnCircle_Content{
+    background-color: transparent;
+}
+.btnCircle_Content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: all .15s ease;
+    background-color: hsl(223, 15%, 91%);
+}
+
+.btnCircle_Content:hover{
+    background-color: hsl(220, 10%, 87%)
+}
+.btnCircle_Content::before{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 0%;
+    border-radius: 50%;
+    transition: all .25s ease;
+}
+.btnCircle_Content:active{
+    transform: scale(.9);
+}
+
+.btnCircle_Content:active::before{
+    width: 100%;
+    height: 100%;
+    background-color: hsl(228, 9%, 82%);
+}
+
+
+/* funcion no action, eliminara el efecto de boton */
+.noAction .btnCircle_Content{
+    background-color: #d0d3da;
+}
+.noAction .btnCircle_Content:hover{
+    background-color: #d0d3da;
+}
+.noAction .btnCircle_Content::before{
+    display: none;
+}
+.noAction .btnCircle_Content:active{
+    transform: none;
+}
+.noAction .btnCircle_Content:active::before{
+    background-color: transparent;
+}
+
+.noAction .btnCircle_icon{
+    width: 24px;
+    height: 24px;
+}
+.btnCircle_icon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+.btnCircle_icon svg{
+    transition: all .35s ease;
+    width: 100%;
+    height: 100%;
+    fill: var(--textColor);
+}
+.btnCircle.active .btnCircle_Content::before{
+    width: 100%;
+    height: 100%;
+    background-color: #E7F3FE;
+}
+.btnCircle.active .btnCircle_icon svg{
+    fill: var(--primary);
+}

@@ -1,0 +1,324 @@
+header{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--headerBgColor);
+    overflow-x: hidden;
+}
+.heroAnimated_icon{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.heroAnimated_icon .wrapper{
+    transform: scale(0.32);
+}
+.header_hero{
+    position: relative;
+    width:95%;
+    max-width: 1500px;
+    display: grid;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+    grid-template-columns: 55% 1fr;
+}
+.header_content{
+   width: 100%;
+   position: relative;
+   z-index: 10;
+}
+.first_text{
+    font-size: 19px;
+    font-weight: 600;
+}
+.main_text_content{
+    margin: 5px 0 16px 0;
+}
+.main_text{
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    font-size: calc(1.6rem + 1.5vw);
+}
+.animate_text{
+    text-transform: none;
+}
+.parraf_text{
+    font-size: 16px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.bgAnimation_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 550px;
+    height: 580px;
+    right: 10px;
+    transition: all .3s ease;
+    transform: translateY(-40px);
+}
+.anderson_container{
+    position: absolute;
+    bottom: -32px;
+    height: 410px;
+    overflow: hidden;
+    z-index: 3;
+}
+
+/*========= Icons =========*/
+.mainIcon_container{
+    width: var(--mainIcon_container-width);
+    height: var(--mainIcon_container-width);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--headerBgColor);
+    box-shadow: 0 8px 20px 0 rgb(0 0 0 / 6%);
+    position: absolute;
+    top: 60px;
+    transition: all .25s ease;
+    animation: onda-vital 2s ease infinite;
+    /* transform: scale(.1); */
+}
+.mainIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(var(--mainIcon_container-width) - 68px );
+    height: calc(var(--mainIcon_container-width) - 68px );
+}
+.mainIcon svg{
+    width: 100%;
+    height: 100%;
+    fill: var(--primary);
+}
+@keyframes onda-vital {
+    0% {
+        box-shadow: 0 0 0 0 #0D6EFD, 0 0 0 0 #0D6EFD;
+    }
+
+    80% {
+        box-shadow: 0 0 0 30px #fff0, 0 0 0 76px #fff0;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 #fff0, 0 0 0 0 #fff0;
+    }
+}
+.componente{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 14px;
+    background-color: var(--headerBgColor);
+    width: 100px;
+    height: 100px;
+    border-radius: 25%;
+    box-shadow: 0 10px 20px -5px rgb(44 58 65 / 15%);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+.componente:hover{
+    box-shadow: none;
+}
+.componente.love{
+    background-color: transparent;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 0;
+    box-shadow: none; 
+    top: 182px;
+    left: 380px;
+    z-index: 5;
+}
+.componente svg{
+    width: 100%;
+}
+.javascript{
+    width: 110px;
+    height: 110px;
+    top: 20px;
+    left: 380px;
+    padding: 18px;
+    animation: react 22s ease infinite;
+}
+.html5{
+    top: 50px;
+    left: 55px;
+    animation: react 15s ease infinite;
+}
+.css{
+    width: 120px;
+    height: 120px;
+    padding: 18px;
+    top: 190px;
+    left: 15px;
+    animation: react 18s ease infinite;
+}
+.nodejs{
+    width: 180px;
+    height: 120px;
+    padding: 22px;
+    top: 370px;
+    left: -10px;
+    animation: react 17s ease infinite;
+}
+.reactjs{
+    width: 135px;
+    height: 135px;
+    top: 270px;
+    left: 356px;
+    z-index: 4;
+    animation: react 17s ease infinite;
+}
+.flutter{
+    width: 105px;
+    height: 105px;
+    top: 146px;
+    left: 475px;
+    padding: 22px;
+    animation: react 19s ease infinite;
+}
+.git{
+    width: 80px;
+    height: 80px;
+    top: 447px;
+    left: 430px;
+    animation: react 20s ease infinite;
+}
+@keyframes react {
+    0% {
+        transform:translate(0)
+    }
+    30% {
+        transform:translateY(-15px)
+    }
+    50% {
+        transform:translateY(6px)
+    }
+    70% {
+        transform:translateY(-20px)
+    }
+    to {
+        transform:translate(0)
+    }
+}
+.header_footer{
+    width: 95%;
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    /* margin-top: 15px; */
+}
+.constructores{
+    display: flex;
+    gap: 10px;
+}
+.built_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 40px;
+}
+.built_icon.end{
+    height: 38px;
+}
+.built_icon svg{
+    width: 100%;
+    height: 100%;
+}
+.built_icon.end svg{
+    filter: grayscale(1);
+}
+.built_icon.end svg:hover{
+    filter: grayscale(0);
+}
+.otherDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.otherDiv .constructores{
+    margin-top: 3px;
+}
+@media(max-width: 1600px){
+    .header_hero{
+        height: 470px;
+    }
+    .bgAnimation_container{
+        right: -10px;
+        transform: scale(.8),translateY(-34px);
+    }
+}
+@media(max-width: 1000px){
+    .header_hero{
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+    .bgAnimation_container{
+        position: static;
+        right: -30px;
+        transform:scale(.5);
+        display: none;
+    }
+    .header_footer{
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        margin: 16px;
+    }
+    .otherDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+}
+@media(max-width: 400px){
+    .header_footer{
+       position: absolute;
+       bottom: 0;
+    }
+}
+
+@media(min-width: 500px){
+    .main_text{
+        font-size: calc(1.9rem + 1.5vw);
+    }
+    .parraf_text{
+        font-size: 16px;
+    }
+    .header_hero{
+        position: relative;
+        width: 90%;
+    }
+    .header_footer{
+        width: 90%;
+    }
+    .main_text_content{
+        margin: 12px 0 20px 0;
+    }
+}
